@@ -65,7 +65,10 @@ h1 {
 }
 
 nav {
-   padding: 10px;
+   padding: 30px;
+   display: flex;
+   justify-content: center;
+   word-spacing: 10px;
 }
 nav li {
     display: inline-flex;
@@ -109,17 +112,19 @@ p {
 figure {
     display: flex;
     flex-flow: column;
-    padding: 5px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
 }
 figcaption, label, input, small {
     font-size: 1em;
 }
 figcaption {
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 .fc1 {
 position: absolute;
-top: 90%;
+/* top: 90%; */
 }
 #form {
    color: #FFFFFF; 
@@ -134,6 +139,7 @@ input[type=submit] {
     text-transform: uppercase;
     border-radius: 10px;
     width: 50%;
+    text-align: center;
 }
 input {
     color: #007d7b;
@@ -150,4 +156,55 @@ footer {
     color: #FFFFFF;
     text-align: center;
     padding: 10px;
+}
+
+.figure-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.figure-container > img {
+    width: 100%;
+}
+
+.figure-container > figcaption {
+    position: relative;
+    bottom: 2rem;
+    height: 0;
+}
+
+figcaption.top {
+    top: 1rem;
+}
+
+figcaption.white {
+    color: white;
+}
+
+/* medium sized window */
+@media screen and (min-width:879px) {
+    main, body, nav {
+        width: 879px;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+@media screen and (min-width:1299px) {
+    main, body, nav {
+        width: 1299px;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 10px;
+    }
 }
